@@ -1,0 +1,2219 @@
+<BASE HREF="http://transmission.m0k.org/ChangeLog"><table border=1 width=100%><tr><td><table border=1 bgcolor=#ffffff cellpadding=10 cellspacing=0 width=100% color=#ffffff><tr><td><font face=arial,sans-serif color=black size=-1>This is <b><font color=#0039b6>G</font> <font color=#c41200>o</font> <font color=#f3c518>o</font> <font color=#0039b6>g</font> <font color=#30a72f>l</font> <font color=#c41200>e</font></b>'s <a href="http://www.google.com/help/features.html#cached"><font color=blue>cache</font></a> of <A HREF="http://transmission.m0k.org/ChangeLog"><font color=blue>http://transmission.m0k.org/ChangeLog</font></a> as retrieved on 28 Dec 2005 16:01:09 GMT.<br>
+<b><font color=#0039b6>G</font> <font color=#c41200>o</font> <font color=#f3c518>o</font> <font color=#0039b6>g</font> <font color=#30a72f>l</font> <font color=#c41200>e</font></b>'s cache is the snapshot that we took of the page as we crawled the web.<br>
+The page may have changed since that time.  Click here for the <A HREF="http://transmission.m0k.org/ChangeLog"><font color=blue>current page</font></a> without highlighting.<br>
+This cached page may reference images which are no longer available. Click here for the <A HREF="http://66.102.9.104/search?q=cache:BwDIqo1wxnUJ:transmission.m0k.org/ChangeLog+transmission+site:transmission.m0k.org&hl=en&lr=&client=safari&strip=1"><font color=blue>cached text</font></a> only.<br>To link to or bookmark this page, use the following url: <code>http://www.google.com/search?q=cache:BwDIqo1wxnUJ:transmission.m0k.org/ChangeLog+transmission+site:transmission.m0k.org&amp;hl=en&amp;client=safari</code></font><br><br><center><font size=-2><i>Google is neither affiliated with the authors of this page nor responsible for its content.</i></font></center></td></tr>
+<tr><td>
+<table border=0 cellpadding=0 cellspacing=0><tr><td><font face=arial,sans-serif color=black size=-1>These search terms have been highlighted:&nbsp;</font></td><td bgcolor=#ffff66><B><font face=arial,sans-serif color=black size=-1>transmission&nbsp;</font></B></td></tr></table>
+</td></tr></table></td></tr></table>
+<hr>
+2005-12-27 00:22  joshe
+
+	* gtk/main.c: Allow stopping torrents to be restarted now that
+	libtransmission handles this.
+
+2005-12-27 00:14  joshe
+
+	* libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c: When starting a torrent, join a
+	stopping or stopped thread first.
+
+2005-12-26 23:55  joshe
+
+	* gtk/: main.c, prefs.c, prefs.h: Make the properties window less
+	ugly, and open it when double-clicking on a torrent.
+
+2005-12-26 23:33  joshe
+
+	* gtk/main.c: Allow multiple rows to be selected.  Correctly free
+	popup menu widget after using it.  Prevent the user from restarting
+	a torrent that isn't stopped yet.
+
+2005-12-25 20:35  titer
+
+	* configure, beos/makefile, libtransmission/platform.c:  Fixed
+	build on BeOS and Zeta 1.1 detection
+	
+	 Patch by Vegard Waerp
+
+2005-12-22 16:43  titer
+
+	* libtransmission/platform.c:  Store resume files in
+	~/Library/Caches/<b style="color:black;background-color:#ffff66">Transmission</b> on OS X, and move
+	 there what was in ~/.<b style="color:black;background-color:#ffff66">transmission
+
+</b>2005-12-22 15:57  titer
+
+	* AUTHORS, gtk/main.c, libtransmission/fastresume.h,
+	libtransmission/fdlimit.c, libtransmission/inout.c,
+	libtransmission/internal.h, libtransmission/platform.c,
+	libtransmission/platform.h, libtransmission/tracker.c,
+	libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c, libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.h,
+	libtransmission/upload.c:  Moved more code into platform*, cleaned
+	a bit
+
+2005-12-21 23:06  titer
+
+	* macosx/Controller.m:	Fill the "Open Recent" menu, cosmetic
+
+2005-12-21 22:46  titer
+
+	* macosx/Controller.m:	Place the prefs "visually centered" like
+	the guidelines say
+
+2005-12-21 22:05  titer
+
+	* AUTHORS, macosx/PrefsController.m:  Fixed folderSheetClosed: (by
+	Mitchell again)
+
+2005-12-21 00:18  titer
+
+	* macosx/: PrefsController.h, PrefsController.m,
+	English.lproj/MainMenu.nib/classes.nib,
+	English.lproj/MainMenu.nib/info.nib,
+	English.lproj/MainMenu.nib/keyedobjects.nib:  Preferences lifting
+
+2005-12-20 23:58  titer
+
+	* Jamrules, macosx/Info.plist.in:  Set CFBundleShortVersionString
+	so can see the version in the Finder
+	
+	 (change by Mitchell Livingston, like the previous big commit)
+
+2005-12-20 23:54  titer
+
+	* macosx/Controller.m:	Restored placement of the prefs window
+
+2005-12-20 23:48  titer
+
+	* macosx/English.lproj/MainMenu.nib/: info.nib, keyedobjects.nib: 
+	Reverted the window menu change (we were getting the main window
+	twice)
+
+2005-12-20 23:32  titer
+
+	* macosx/: Controller.h, Controller.m, PrefsController.h,
+	PrefsController.m, TorrentTableView.h, TorrentTableView.m,
+	English.lproj/MainMenu.nib/classes.nib,
+	English.lproj/MainMenu.nib/info.nib,
+	English.lproj/MainMenu.nib/keyedobjects.nib, Images/Network.png,
+	<b style="color:black;background-color:#ffff66">Transmission</b>.xcodeproj/project.pbxproj:  Added a warning sheet when
+	you quit with active torrents
+	 Allowed removing of active torrents (with a warning)
+	 More menu bar items / shortcuts
+	 Separate context menu when you click on an empty zone
+	 Splitted the Preferences in sections you can browse through the
+	toolbar
+	 Shows version number in finder
+	Window menu and dock menu show <b style="color:black;background-color:#ffff66">Transmission</b> window removed
+	Preferences toolbar icon method for changing preferences much
+	better functions such as setting default/max/min table size and
+	resizing are  handled in the nib rather than coded in the
+	Controller don't show toolbar-button in Preferences window Reveal
+	in Finder context menu hooked up again (my bad) some general
+	cleanup
+
+2005-12-18 17:36  joshe
+
+	* gtk/prefs.c: Fix an error when download directory was empty in
+	the prefs.
+
+2005-12-18 00:13  joshe
+
+	* gtk/: gtkcellrenderertorrent.c, gtkcellrenderertorrent.h, main.c:
+	Add a kludge to handle theme changes properly.
+
+2005-12-17 23:09  joshe
+
+	* gtk/: main.c, prefs.c, prefs.h: Use 20K as the default upload
+	limit if none is set.
+	
+	Fix a bug that was causing errors when no download directory was
+	set.
+	
+	Add a new file dialog for adding torrent files:   Use the new, more
+	featureful GtkFileChooser dialog.    Allow multiple torrents to be
+	selected to add several at once.    By default, only display files
+	who's names end with .torrent	 Allow an alternate download
+	directory to be selected when adding a torrent.    Allow torrents
+	to be added in a paused state.
+
+2005-12-17 06:56  bvarner
+
+	* beos/TRWindow.cpp: <b style="color:black;background-color:#ffff66">Transmission</b> now remembers what torrent state
+	between sessions. (running, paused, etc)
+
+2005-12-16 18:43  titer
+
+	* macosx/: Controller.h, Controller.m,
+	English.lproj/MainMenu.nib/classes.nib,
+	English.lproj/MainMenu.nib/info.nib,
+	English.lproj/MainMenu.nib/keyedobjects.nib,
+	<b style="color:black;background-color:#ffff66">Transmission</b>.xcodeproj/project.pbxproj:  Properly enable menu and
+	toolbar items through validate* methods
+	 Added Show/Hide/Customize Toolbar to the menu bar
+	 Added a few more possible toolbar items (Stop All/Resume All are
+	disabled
+	   for now, in lack of images)
+	
+	 Patch by Mitchell Livingston
+
+2005-12-13 19:43  titer
+
+	* AUTHORS, macosx/Controller.m, macosx/NameCell.h,
+	macosx/NameCell.m, macosx/ProgressCell.h, macosx/ProgressCell.m: 
+	macosx/: use white text when the cell is highlighted
+
+2005-12-12 07:58  titer
+
+	* libtransmission/platform.c:  Fixed build
+
+2005-12-12 05:59  bvarner
+
+	* beos/TRWindow.cpp: Added Drag N' Drop File Opening
+
+2005-12-12 05:34  bvarner
+
+	* beos/TRPrefsWindow.cpp: Fixed a stupid mis-labeled setting.
+
+2005-12-12 05:28  bvarner
+
+	* beos/makefile: Fixed a (stupid) mistake with building on BONE.
+	Now selects libs conditionally
+
+2005-12-12 04:11  bvarner
+
+	* beos/<b style="color:black;background-color:#ffff66">Transmission</b>.rsrc: Synched version info to what I expect the
+	next official release of <b style="color:black;background-color:#ffff66">Transmission</b> to be (0.5 I guess)
+
+2005-12-12 04:00  bvarner
+
+	* beos/<b style="color:black;background-color:#ffff66">Transmission</b>.rsrc: Modified the .rsrc to properly associate
+	application/x-bittorrent types to <b style="color:black;background-color:#ffff66">Transmission</b>.
+
+2005-12-12 03:40  bvarner
+
+	* Jamfile, Jamrules, configure: Changes to the configure script,
+	and jamfiles to add BeOS UI target.
+
+2005-12-12 03:37  bvarner
+
+	* beos/: TRApplication.cpp, TRApplication.h, TRInfoWindow.cpp,
+	TRInfoWindow.h, TRPrefsWindow.cpp, TRPrefsWindow.h, TRTransfer.cpp,
+	TRTransfer.h, TRWindow.cpp, TRWindow.h, <b style="color:black;background-color:#ffff66">Transmission</b>.rsrc,
+	makefile: Checkin of the BeOS <b style="color:black;background-color:#ffff66">Transmission</b> UI
+
+2005-12-12 03:37  bvarner
+
+	* beos/libPrefs/: Prefs.h, libPrefs.a: A simple static library for
+	storing preferences as BMessages.
+
+2005-12-12 03:35  bvarner
+
+	* libtransmission/: Jamfile, platform.c, platform.h,
+	<b style="color:black;background-color:#ffff66">transmission</b>.c, <b style="color:black;background-color:#ffff66">transmission</b>.h: Changes to libtransmission.
+	Platform abstraction for finding the path to store settings
+	(.<b style="color:black;background-color:#ffff66">transmission</b> in the home directory looks nasty on BeOS), extern C
+	(so you can link C++ apps), and modifications to the jamfile.
+
+2005-12-09 17:55  titer
+
+	* transmissioncli.c:  Typo
+
+2005-12-06 04:31  joshe
+
+	* gtk/main.c: Try to provide a sane initial size for the main
+	window.
+
+2005-12-04 19:20  joshe
+
+	* gtk/main.c: Comment-out some debugging code.
+
+2005-12-04 19:05  joshe
+
+	* gtk/main.c: Whoops.  Fix a GTK warning that occurs when no
+	torrents are active.
+
+2005-12-03 21:48  joshe
+
+	* gtk/: gtkcellrenderertorrent.c, main.c: Disable buttons and
+	remove context menu items when they cannot be used.
+	
+	Remove the preference item from the context menu.
+	
+	Left align the text under the progress bar instead of centering.
+	
+	Improve the progress bar renderer to look like the normal progress
+	bars.
+	
+	Lower exit timeout to 5 seconds, it was only higher for debugging.
+	
+	Give extra horizontal space in the list to the name column instead
+	of the progress column.
+
+2005-12-02 16:10  joshe
+
+	* gtk/gtkcellrenderertorrent.c: Draw the text under the progress
+	bar the right color when the cell is selected.
+
+2005-12-02 05:27  joshe
+
+	* gtk/: Jamfile, gtkcellrenderertorrent.c,
+	gtkcellrenderertorrent.h, main.c, util.c, util.h: Improve the
+	torrent list display to look more like the MacOS X GUI:   Fit
+	filename, size, status, peers, progress, and eta in one multiline
+	column.    Use a modified version of GtkCellRendererProgress to
+	display upload	    and download rates under a progress bar.   
+	Format sizes and rates in human-readable sizes like KiB, MiB, etc.
+	
+	Display total download and upload rate in a status bar at the
+	bottom	 of the main window.
+
+2005-12-01 21:55  titer
+
+	* macosx/Controller.m:	Typo
+
+2005-12-01 17:57  titer
+
+	* macosx/Controller.m:	Quick 'n dirty test for Growl installation.
+	Don't even compile the
+	 AppleScript if GrowlHelperApp cannot be found, otherwise a dialog
+	 shows up
+
+2005-11-30 19:28  titer
+
+	* configure:  Require GTK 2.6.0 or later, at least for now
+
+2005-11-30 16:28  joshe
+
+	* gtk/main.c: Fix removing a torrent from the context menu.
+
+2005-11-27 14:37  titer
+
+	* libtransmission/inout.c:  Cleaning
+
+2005-11-25 14:57  keul
+
+	* transmissioncli.c: Added an option to transmissioncli to run a
+	shell command on completion
+
+2005-11-25 06:43  titer
+
+	* libtransmission/tracker.c:  Fixed a segfaulting typo in
+	trackerScrape
+
+2005-11-23 17:25  titer
+
+	* macosx/Controller.m:	Only register or notify Growl if it is
+	installed and running
+
+2005-11-23 16:57  keul
+
+	* macosx/Torrents_folder_action.scpt: Added Folder action script to
+	open torrents in <b style="color:black;background-color:#ffff66">Transmission</b> automatically when added to the
+	directory.
+
+2005-11-23 16:10  titer
+
+	* macosx/: Controller.h, Controller.m, TorrentTableView.m: 
+	TorrentTableView.m: removed unused code
+	 Controller*: now move files to Trash instead of deleting them. We
+	do
+	   this through yet another AppleScript, since it is just not
+	possible
+	   with Cocoa. Removed the "scary warnings". The context menu items
+	are
+	   unchanged, I am quite not sure how to label them (mike ?)
+
+2005-11-23 09:21  titer
+
+	* libtransmission/: upload.c, utils.h:	Optimized (by avoiding
+	pointless 64-bit divisions)
+
+2005-11-23 07:16  titer
+
+	* macosx/: Controller.m, <b style="color:black;background-color:#ffff66">Transmission</b>.xcodeproj/project.pbxproj: 
+	No longer link against Growl Framework nor copy it into
+	<b style="color:black;background-color:#ffff66">Transmission</b>.app
+	 Notify "Download Complete" without the period at the end
+
+2005-11-22 21:25  keul
+
+	* Jamfile, Jamrules, macosx/Controller.h, macosx/Controller.m:
+	Changed growl notification to use applescript instead of Framework
+
+2005-11-22 08:25  titer
+
+	* transmissioncli.c, macosx/Controller.m, macosx/PrefsController.m:
+	 Removed other hardcoded 9090s
+
+2005-11-22 07:00  titer
+
+	* macosx/: ProgressCell.h, ProgressCell.m:  Added comments and
+	optimized drawing
+
+2005-11-21 17:34  joshe
+
+	* gtk/prefs.c, libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c,
+	libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.h: Move default port into
+	<b style="color:black;background-color:#ffff66">transmission</b>.h
+
+2005-11-21 06:44  joshe
+
+	* AUTHORS, gtk/Jamfile, gtk/conf.c, gtk/conf.h, gtk/main.c,
+	gtk/prefs.c, gtk/prefs.h, gtk/util.c, gtk/util.h: Add a very basic
+	preferences dialog.
+	
+	Use prefs for listening port, upload limit, and download directory.
+	 Add them to the prefs dialog.
+	
+	Remove command-line options as they are no longer needed.
+	
+	Fix a couple of minor bugs with preferences and state files.
+	
+	Remove old commented-out code and other miscellaneous minor
+	cleanups.
+
+2005-11-20 12:57  keul
+
+	* macosx/: Controller.h, Controller.m,
+	English.lproj/MainMenu.nib/classes.nib,
+	English.lproj/MainMenu.nib/info.nib,
+	English.lproj/MainMenu.nib/keyedobjects.nib: Added Resume All and
+	Pause All methods and calls in Menubar.
+
+2005-11-20 11:30  keul
+
+	* macosx/: Controller.h, Controller.m,
+	English.lproj/MainMenu.nib/classes.nib,
+	English.lproj/MainMenu.nib/info.nib,
+	English.lproj/MainMenu.nib/keyedobjects.nib: Minor UI changes in
+	context menu and menubar
+
+2005-11-20 10:16  keul
+
+	* macosx/: Controller.h, Controller.m,
+	English.lproj/MainMenu.nib/classes.nib,
+	English.lproj/MainMenu.nib/info.nib,
+	English.lproj/MainMenu.nib/keyedobjects.nib: Added Seeders/Leechers
+	information in Info Panel
+
+2005-11-20 09:59  keul
+
+	* libtransmission/: tracker.c, tracker.h, <b style="color:black;background-color:#ffff66">transmission</b>.c,
+	<b style="color:black;background-color:#ffff66">transmission</b>.h: Added Seeders and Leechers fields in torrent stats
+	and access methods in tracker.c
+
+2005-11-20 09:20  titer
+
+	* macosx/: ProgressCell.h, ProgressCell.m:  Fixed drawing of the
+	progress bar in thousands of colors
+
+2005-11-20 07:15  titer
+
+	* macosx/Controller.m:	When the user changes the bar, redraw
+	immediately instead of waiting for
+	 the next update
+
+2005-11-20 06:53  titer
+
+	* macosx/TorrentTableView.m:  Alt-Click on the Progress column
+	switches between Simple Bar and
+	 Advanced Bar
+
+2005-11-20 06:05  titer
+
+	* Jamrules:  Strip debugging symbols when building a package (makes
+	it ~30% smaller)
+
+2005-11-20 04:17  titer
+
+	* libtransmission/tracker.c, macosx/Controller.m:  Fixed another
+	dangerous usage of snprintf
+	 Waste less space in windowWillUseStandardFrame:
+
+2005-11-20 03:57  titer
+
+	* AUTHORS, macosx/Controller.h, macosx/Controller.m,
+	macosx/TorrentTableView.m:  Factorized revealInFinder: /
+	revealFile:
+	 Fixed revealing through growlNotificationWasClicked:
+
+2005-11-20 00:14  titer
+
+	* libtransmission/metainfo.c:  Fixes crash for torrents which have
+	'%'s in their filename
+
+2005-11-19 09:41  keul
+
+	* macosx/Applescript/Torrents_folder_action.scpt: Corrected a typo
+
+2005-11-19 09:34  keul
+
+	* macosx/Applescript/Torrents_folder_action.scpt: This is a Folder
+	action which opens any torrent file added to the associated
+	directory in <b style="color:black;background-color:#ffff66">Transmission
+
+</b>2005-11-19 09:03  keul
+
+	* macosx/: Controller.m, Info.plist.in, <b style="color:black;background-color:#ffff66">Transmission</b>.sdef: Added
+	support for Applescipt: to open a file
+
+2005-11-19 08:37  keul
+
+	* libtransmission/internal.h, libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c,
+	libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.h, macosx/Controller.h,
+	macosx/Controller.m: Added Growl notification on completion of
+	download
+
+2005-11-19 07:03  titer
+
+	* Jamfile, Jamrules, macosx/<b style="color:black;background-color:#ffff66">Transmission</b>.xcodeproj/project.pbxproj:
+	 Added Growl framework
+
+2005-11-19 00:58  titer
+
+	* Jamrules, gtk/Jamfile:  Properly set GTK ccflags and linkflags
+
+2005-11-19 00:29  titer
+
+	* configure:  Cleaned duplicate GTK test
+
+2005-11-18 23:58  titer
+
+	* AUTHORS:  Test commit
+
+2005-11-18 23:45  joshe
+
+	* Jamfile, configure, gtk/Jamfile, gtk/conf.c, gtk/conf.h,
+	gtk/main.c, gtk/util.c, gtk/util.h: Initial import of GTK+ GUI.
+	
+	It's ugly and missing quite a bit of functionality, but it does
+	work.
+
+2005-11-18 23:08  titer
+
+	* libtransmission/: completion.c, completion.h, <b style="color:black;background-color:#ffff66">transmission</b>.c: 
+	Don't forget to reset the completion when restarting a torrent
+
+2005-11-18 04:23  titer
+
+	* Jamrules:  Now 0.5-cvs
+
+2005-11-18 04:00  titer
+
+	* AUTHORS, Jamrules, NEWS:  0.4 release
+
+2005-11-18 03:40  titer
+
+	* macosx/ProgressCell.m:  Made the simple progress bar green when
+	seeding
+	 Removed a useless loop
+
+2005-11-18 03:29  titer
+
+	* macosx/: Controller.h, Controller.m,
+	English.lproj/MainMenu.nib/classes.nib,
+	English.lproj/MainMenu.nib/info.nib,
+	English.lproj/MainMenu.nib/keyedobjects.nib:  Added
+	Pause/Resume/Remove menu items, along with keyboard shorcuts
+	   (original patch by Mike)
+
+2005-11-18 02:28  titer
+
+	* NEWS:  List of fixes and new features for 0.4
+
+2005-11-18 01:42  titer
+
+	* libtransmission/: internal.h, tracker.c, <b style="color:black;background-color:#ffff66">transmission</b>.c:  Added a
+	"key" parameter for the tracker, as well as a User Agent field.
+
+2005-11-17 20:52  titer
+
+	* macosx/: Controller.h, Controller.m, NameCell.h, NameCell.m,
+	TorrentTableView.h, TorrentTableView.m, Utils.h,
+	English.lproj/MainMenu.nib/classes.nib,
+	English.lproj/MainMenu.nib/info.nib,
+	English.lproj/MainMenu.nib/keyedobjects.nib:  Now handles all mouse
+	events from the TableView instead of from the Cells.
+	 Clicking pause/resume/reveal does not select the row anymore
+	 You can now pause/resume/reveal without getting the window focus
+	first
+	 Fixed a race condition crash
+
+2005-11-14 02:52  titer
+
+	* libtransmission/tracker.c:  Typo
+
+2005-11-07 18:25  titer
+
+	* macosx/Controller.m:	Fixed the warning when we delete only the
+	torrent or only the data
+
+2005-11-07 18:16  titer
+
+	* AUTHORS, Jamfile, macosx/Controller.h, macosx/Controller.m,
+	macosx/TorrentTableView.h, macosx/TorrentTableView.m,
+	macosx/English.lproj/MainMenu.nib/classes.nib,
+	macosx/English.lproj/MainMenu.nib/info.nib,
+	macosx/English.lproj/MainMenu.nib/keyedobjects.nib,
+	macosx/<b style="color:black;background-color:#ffff66">Transmission</b>.xcodeproj/project.pbxproj:	Contextual menu
+	patch
+
+2005-11-05 21:12  titer
+
+	* libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c:  Fixed a deadlock
+
+2005-11-05 14:51  titer
+
+	* libtransmission/: inout.c, peerutils.h, <b style="color:black;background-color:#ffff66">transmission</b>.c:  Release
+	the lock during all I/Os, so the UI should never hang
+
+2005-11-04 20:59  titer
+
+	* libtransmission/fdlimit.c:  Don't keep the lock when we call
+	fclose(), because it might block and
+	 freeze the UI
+
+2005-11-04 12:45  titer
+
+	* libtransmission/completion.c:  Fixed incorrect calculation in
+	tr_cpLeftBytes
+
+2005-11-03 20:41  titer
+
+	* macosx/NameCell.m:  Fixed "Reveal in Finder" for UTF-8 names
+
+2005-11-03 20:35  titer
+
+	* macosx/: Controller.m, Utils.h:  Fixed display of UTF-8 encoded
+	filenames
+
+2005-11-03 19:38  titer
+
+	* transmissioncli.c:  BeOS compile fix
+
+2005-11-03 16:06  titer
+
+	* libtransmission/peerparse.h:	Forgot a tr_cpDownloaderRem()
+
+2005-11-03 14:15  titer
+
+	* libtransmission/: Jamfile, completion.c, completion.h,
+	fastresume.h, inout.c, internal.h, peer.c, peermessages.h,
+	peerparse.h, peerutils.h, tracker.c, <b style="color:black;background-color:#ffff66">transmission</b>.c, utils.h: 
+	Cosmetic, optimized chooseBlock() for torrents with many pieces
+
+2005-11-01 15:38  titer
+
+	* libtransmission/: fastresume.h, internal.h, <b style="color:black;background-color:#ffff66">transmission</b>.c,
+	<b style="color:black;background-color:#ffff66">transmission</b>.h:  Added tr_getPrefsDirectory()
+
+2005-11-01 13:28  titer
+
+	* Jamrules, configure, libtransmission/peerutils.h:  Added
+	configure options (original patch by mezz)
+
+2005-10-31 17:14  titer
+
+	* Jamfile, macosx/Images/Resume.png, macosx/Images/Stop.png,
+	macosx/<b style="color:black;background-color:#ffff66">Transmission</b>.xcodeproj/project.pbxproj:	Removed unused
+	images
+
+2005-10-31 17:11  titer
+
+	* libtransmission/peerutils.h:	Fixed a bug in End Game mode :
+	sometimes we were asking a block the
+	 peer doesn't have
+
+2005-10-30 21:06  titer
+
+	* Jamrules:  Define NOARSCAN so Jam doesn't rebuild libtransmission
+	every time
+	 Info.plist now depends on Jamrules
+	 Bumped VERSION_STRING to 0.4-cvs to avoid confusion with 0.3
+
+2005-10-30 01:19  titer
+
+	* macosx/NameCell.m:  Don't forget to activate the Finder so it
+	gets the focus
+
+2005-10-29 18:55  titer
+
+	* macosx/: Controller.m, NameCell.m, Images/Preferences.png,
+	<b style="color:black;background-color:#ffff66">Transmission</b>.xcodeproj/project.pbxproj:  Added a "Preferences"
+	toolbar item
+	 "Reveal in Finder" now selects the file or folder in Finder
+
+2005-10-28 15:37  titer
+
+	* macosx/English.lproj/MainMenu.nib/: info.nib, keyedobjects.nib: 
+	Fixed placing of the NSTableView (must have accidently moved it)
+
+2005-10-28 14:59  titer
+
+	* libtransmission/peermessages.h, libtransmission/peerparse.h,
+	macosx/Controller.m, macosx/English.lproj/MainMenu.nib/info.nib,
+	macosx/English.lproj/MainMenu.nib/keyedobjects.nib:  - Fixed
+	columns resizing when they have been reordered (probably fixes
+	   the resizing problems on Panther too)
+	 - Remember columns ordering
+
+2005-10-28 12:54  titer
+
+	* macosx/Controller.m:	Use NSEventTrackingRunLoopMode for the
+	timer so we keep updating every
+	 500ms in any case (even when the window is being resized)
+
+2005-10-28 12:39  titer
+
+	* libtransmission/: peer.c, peerparse.h, peerutils.h:  Splitted the
+	huge parsing function
+
+2005-10-27 22:26  titer
+
+	* libtransmission/: internal.h, <b style="color:black;background-color:#ffff66">transmission</b>.c:  Implemented 60
+	secs timeout for pausing
+
+2005-10-27 21:19  titer
+
+	* macosx/NameCell.m:  Properly crop the text now that there are
+	buttons
+
+2005-10-27 21:14  titer
+
+	* libtransmission/: peer.c, <b style="color:black;background-color:#ffff66">transmission</b>.c:  Keep updating the
+	rates in TR_STATUS_STOPPING mode
+
+2005-10-27 21:07  titer
+
+	* macosx/: Controller.h, Controller.m, NameCell.h, NameCell.m,
+	ProgressCell.h, Images/PauseOff.png, Images/PauseOn.png,
+	Images/ResumeOff.png, Images/ResumeOn.png,
+	<b style="color:black;background-color:#ffff66">Transmission</b>.xcodeproj/project.pbxproj:  Removed toolbar
+	pause/resume buttons and added a small button
+	 for each torrent
+
+2005-10-27 14:08  titer
+
+	* .cvsignore, Jamfile, macosx/.cvsignore, macosx/Controller.m,
+	macosx/NameCell.m, macosx/ProgressCell.m, macosx/Images/Info.png,
+	macosx/Images/Info.tiff, macosx/Images/Open.png,
+	macosx/Images/Open.tiff, macosx/Images/Progress.png,
+	macosx/Images/Progress.tiff, macosx/Images/Remove.png,
+	macosx/Images/Remove.tiff, macosx/Images/Resume.png,
+	macosx/Images/Resume.tiff, macosx/Images/RevealOff.png,
+	macosx/Images/RevealOff.tiff, macosx/Images/RevealOn.png,
+	macosx/Images/RevealOn.tiff, macosx/Images/Stop.png,
+	macosx/Images/Stop.tiff,
+	macosx/<b style="color:black;background-color:#ffff66">Transmission</b>.xcodeproj/project.pbxproj:	Use PNG images
+	instead of TIFF (makes the bundle slightly smaller)
+
+2005-10-26 23:08  titer
+
+	* Jamrules:  Small simplification
+
+2005-10-26 22:51  titer
+
+	* Jamrules:  'jam clean' should remove Info.plist
+
+2005-10-26 22:48  titer
+
+	* Jamfile, Jamrules, macosx/Info.plist, macosx/Info.plist.in: 
+	Generate Info.plist with the version from Jamrules
+
+2005-10-26 21:33  titer
+
+	* Jamfile, Jamrules:  Tweaked package generation
+
+2005-10-26 21:11  titer
+
+	* macosx/: NameCell.h, NameCell.m:  Fixed highlighting of the
+	Reveal button
+
+2005-10-25 05:06  titer
+
+	* libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.h:  Typos
+
+2005-10-24 16:58  titer
+
+	* Jamfile, macosx/English.lproj/MainMenu.nib/info.nib,
+	macosx/English.lproj/MainMenu.nib/keyedobjects.nib,
+	macosx/Images/RevealOff.tiff, macosx/Images/RevealOn.tiff:  Forgot
+	to commit the images for the "Reveal" buttons
+	 Enabled saving of the main window position
+
+2005-10-24 16:33  titer
+
+	* libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c, libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.h,
+	macosx/NameCell.h, macosx/NameCell.m,
+	macosx/<b style="color:black;background-color:#ffff66">Transmission</b>.xcodeproj/project.pbxproj:	Added "Reveal in
+	Finder" buttons
+
+2005-10-24 10:21  titer
+
+	* macosx/Controller.m:	Fixed info panel (we were always showing
+	info about the first torrent)
+
+2005-10-23 11:33  titer
+
+	* Jamfile, macosx/Images/TransmissionDocument.icns:  Sharper 16x16
+	document icon
+
+2005-10-23 03:10  titer
+
+	* macosx/English.lproj/MainMenu.nib/: info.nib, keyedobjects.nib: 
+	Allow column reordering
+
+2005-10-23 01:47  titer
+
+	* Jamrules, libtransmission/peerutils.h:  When several pieces are
+	equally rare, pick a random one instead of the
+	 first one
+	 Fixed build of of transmissioncli as a Universal Binary
+
+2005-10-23 01:32  titer
+
+	* macosx/Controller.m:	Grmbl - we were always hanging for 5 sec at
+	exit even when the trackers
+	 could be reached
+
+2005-10-23 01:16  titer
+
+	* libtransmission/: bencode.c, metainfo.c, tracker.c:  Typos
+
+2005-10-23 01:09  titer
+
+	* macosx/: Info.plist, Images/TransmissionDocument.icns,
+	<b style="color:black;background-color:#ffff66">Transmission</b>.xcodeproj/project.pbxproj:  Added document icon
+
+2005-10-23 00:39  titer
+
+	* libtransmission/peer.c:  Don't assume we are on a low-speed
+	network
+
+2005-10-22 19:15  titer
+
+	* libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c, libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.h,
+	macosx/Controller.m:  Dropped compatibility with 0.1 preferences,
+	cleanup
+
+2005-10-22 18:55  titer
+
+	* transmissioncli.c, libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c,
+	libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.h, macosx/Controller.h,
+	macosx/Controller.m, macosx/NameCell.h, macosx/NameCell.m,
+	macosx/ProgressCell.h, macosx/ProgressCell.m:  torrentStat now
+	retrieves status about all torrents, and automatically
+	 joins threads for stopping torrents (so, no need for torrentQuit
+	anymore)
+	
+	 OS X: call torrentStat only when needed
+
+2005-10-22 14:26  titer
+
+	* libtransmission/peerutils.h, macosx/Controller.h,
+	macosx/Controller.m, macosx/English.lproj/MainMenu.nib/classes.nib,
+	macosx/English.lproj/MainMenu.nib/info.nib,
+	macosx/English.lproj/MainMenu.nib/keyedobjects.nib:  Command-1 now
+	bring the main window to front
+
+2005-10-22 14:01  titer
+
+	* libtransmission/: peer.c, peermessages.h, peerutils.h:  Optimized
+	(only update the interest when needed)
+
+2005-10-22 13:15  titer
+
+	* libtransmission/peerutils.h:	Quick optim in chooseBlock() (this
+	needs to be properly optimized some day)
+
+2005-10-22 12:45  titer
+
+	* macosx/English.lproj/MainMenu.nib/: info.nib, keyedobjects.nib: 
+	Unified toolbar, removed borders
+
+2005-10-21 02:53  titer
+
+	* macosx/Controller.m:	When the window was closed then ordered
+	front, make it the key window
+	 as well
+
+2005-10-21 02:49  titer
+
+	* Jamfile, Jamrules, packageOSX.sh:  Moved package generation to
+	the Jamfile. Now it builds the dmg as well
+
+2005-10-19 01:50  titer
+
+	* Jamrules, NEWS, packageOSX.sh, macosx/Controller.m,
+	macosx/Info.plist, macosx/English.lproj/MainMenu.nib/info.nib,
+	macosx/English.lproj/MainMenu.nib/keyedobjects.nib:  0.3
+
+2005-10-19 01:09  titer
+
+	* libtransmission/tracker.c:  Ooops
+
+2005-10-19 01:05  titer
+
+	* libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c:  Once torrentQuit has been
+	called, don't call peerPulse
+
+2005-10-19 00:57  titer
+
+	* Jamfile, transmissioncli.c, libtransmission/tracker.c,
+	libtransmission/tracker.h, libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c,
+	libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.h, macosx/Controller.h,
+	macosx/Controller.m, macosx/NameCell.m:  The UI can now wait in a
+	asynchronous for the tracker to get our "stopped"
+	message. Also fixed the OS X crash at exit (I think)
+
+2005-10-18 22:37  titer
+
+	* AUTHORS, Jamfile, Jamrules, macosx/Controller.m,
+	macosx/NameCell.m, macosx/<b style="color:black;background-color:#ffff66">Transmission</b>.icns, macosx/Utils.h,
+	macosx/Images/<b style="color:black;background-color:#ffff66">Transmission</b>.icns,
+	macosx/<b style="color:black;background-color:#ffff66">Transmission</b>.xcodeproj/project.pbxproj:	Enhanced icon
+	 Now build universal binaries on OS X
+	 Show sizes in human readable form in the info panel
+
+2005-10-18 03:10  titer
+
+	* libtransmission/peerutils.h:	Fixed an incorrect warning when we
+	get an unexpected block
+
+2005-10-18 02:55  titer
+
+	* libtransmission/peer.c:  Fixed a pretty old and nasty bug: send()
+	sometimes only half-succeeds
+	(only sends part of the buffer), so we now use check return value
+	in order not to trash what hasn't been sent.
+
+2005-10-17 18:43  titer
+
+	* libtransmission/: Jamfile, clients.c, clients.h, internal.h,
+	peer.c, peerutils.h:  Splitted
+
+2005-10-17 17:16  titer
+
+	* libtransmission/fdlimit.c:  Don't forget to store the open
+	date...
+
+2005-10-17 13:03  titer
+
+	* libtransmission/metainfo.c:  Support for 'announce' fields which
+	start with spaces
+
+2005-10-16 12:35  titer
+
+	* libtransmission/metainfo.c:  Added a size limit for torrent files
+	(so we don't even try to load
+	 big files)
+
+2005-10-15 01:47  titer
+
+	* libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c:  x86_64 fix
+
+2005-10-15 00:37  titer
+
+	* libtransmission/fastresume.h:  Removed some debug
+
+2005-10-15 00:36  titer
+
+	* libtransmission/fastresume.h:  Fixed some multithread /
+	reentrancy safety
+
+2005-10-12 16:31  titer
+
+	* configure, libtransmission/internal.h:  OpenSSL detection
+
+2005-10-11 18:34  titer
+
+	* libtransmission/peerutils.h:	Handle "port" message (unused yet
+	though)
+
+2005-10-10 02:50  titer
+
+	* AUTHORS:  Credits for NetBSD/FreeBSD patches
+
+2005-10-10 01:51  titer
+
+	* configure:  FreeBSD port
+
+2005-10-09 20:11  titer
+
+	* libtransmission/: bencode.c, bencode.h, inout.c, inout.h, net.c,
+	net.h, peer.c, peermessages.h, peerutils.h, tracker.c:	Fixed gcc 4
+	signness warnings
+
+2005-10-09 04:34  titer
+
+	* AUTHORS:  Typo
+
+2005-10-08 16:40  titer
+
+	* libtransmission/: peer.c, peerutils.h:  BeOS fixes
+
+2005-10-07 18:26  titer
+
+	* libtransmission/peer.c:  Don't drop not interesting peers when we
+	are seeding
+
+2005-10-07 13:53  titer
+
+	* libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c:  Removed unused code
+
+2005-10-07 13:51  titer
+
+	* libtransmission/: fastresume.h, tracker.c:  tracker.c: gradually
+	increase the interval between two requests until
+	 we get 15 peers
+	 fastresume.h: updated comment
+
+2005-10-07 13:40  titer
+
+	* Jamrules:  On libtool, use libtool to create static libraries (so
+	we will be able
+	 to build universal binaries)
+
+2005-10-05 21:16  titer
+
+	* libtransmission/: peer.c, peermessages.h, peerutils.h, upload.c: 
+	Reworked the upload queue: send the smaller messages ASAP (before
+	the
+	 pending block(s)) and don't count those in the upload rate
+
+2005-10-05 16:35  titer
+
+	* libtransmission/: peer.c, peerutils.h:  Try to guess the clients
+
+2005-10-05 01:06  titer
+
+	* libtransmission/peerutils.h:	more debug
+
+2005-10-05 00:52  titer
+
+	* libtransmission/peerutils.h:	Oooops, bad, bad bugs
+
+2005-10-05 00:17  titer
+
+	* libtransmission/: peermessages.h, peerutils.h:  Don't go crazy if
+	a peer's client doesn't handle multiple requests
+
+2005-10-04 22:51  titer
+
+	* libtransmission/tracker.c:  Always ask for 50 peers
+
+2005-10-04 21:25  titer
+
+	* libtransmission/: tracker.c, <b style="color:black;background-color:#ffff66">transmission</b>.c:	Try to get more
+	peers at the beginning
+	 Nicer rate calculation
+
+2005-10-04 19:10  titer
+
+	* Jamrules, configure, packageOSX.sh, transmissioncli.c,
+	libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c:  Switched peer_id format to Azureus
+	style
+
+2005-10-04 18:24  titer
+
+	* libtransmission/peerutils.h:	Sanity check
+
+2005-10-04 18:11  titer
+
+	* libtransmission/tracker.c:  tr_err -> tr_inf
+
+2005-10-04 13:18  titer
+
+	* libtransmission/: peermessages.h, peerutils.h:  Send the required
+	"cancel" messages in end game mode
+
+2005-10-03 18:34  titer
+
+	* libtransmission/tracker.c:  Be nicer to the tracker
+
+2005-10-03 18:29  titer
+
+	* libtransmission/tracker.c:  Fixed tracker timeout again
+
+2005-10-03 18:04  titer
+
+	* libtransmission/: <b style="color:black;background-color:#ffff66">transmission</b>.c, <b style="color:black;background-color:#ffff66">transmission</b>.h:  Bumped
+	TR_MAX_TORRENT_COUNT to 50
+	 Don't use reserved sockets for bind sockets, so we are sure we
+	will
+	 always be able to reach the trackers
+
+2005-10-03 17:56  titer
+
+	* libtransmission/: internal.h, tracker.c:  (Almost) respect the
+	tracker announce interval
+
+2005-10-03 14:42  titer
+
+	* libtransmission/: tracker.c, tracker.h, <b style="color:black;background-color:#ffff66">transmission</b>.c:  Send the
+	'completed' event
+
+2005-10-03 14:29  titer
+
+	* libtransmission/peer.c:  Sanity check
+
+2005-10-02 15:58  titer
+
+	* macosx/NameCell.m:  Also show tracker errors when seeding
+
+2005-09-30 21:50  titer
+
+	* libtransmission/peermessages.h:  Factorized some code
+
+2005-09-30 17:58  titer
+
+	* NEWS, TODO:  The TODO list is now in the forum
+
+2005-09-30 17:13  titer
+
+	* libtransmission/fdlimit.c:  less debug
+
+2005-09-30 17:10  titer
+
+	* transmissioncli.c:  Show number of people we are uploading to
+
+2005-09-30 16:51  titer
+
+	* TODO, libtransmission/fdlimit.c, libtransmission/fdlimit.h,
+	libtransmission/peer.c, libtransmission/tracker.c,
+	libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c:  Control the number of open sockets
+
+2005-09-28 21:44  titer
+
+	* README:  Ajouté un README pour Omar
+
+2005-09-28 21:34  titer
+
+	* TODO, libtransmission/peer.c:  Fixed build with gcc 2.95.3
+
+2005-09-28 15:47  titer
+
+	* TODO:  More
+
+2005-09-27 22:09  titer
+
+	* libtransmission/upload.c:  Removed a couple of useless tr_dbg
+
+2005-09-27 22:05  titer
+
+	* libtransmission/inout.c:  Fixed an infinite loop and a buffer
+	overflow
+
+2005-09-27 21:43  titer
+
+	* libtransmission/: peer.c, peermessages.h, peerutils.h:  Cosmetic
+
+2005-09-27 21:01  titer
+
+	* libtransmission/: fdlimit.c, peerutils.h:  Cosmetic
+
+2005-09-27 20:39  titer
+
+	* libtransmission/: fastresume.h, inout.c, <b style="color:black;background-color:#ffff66">transmission</b>.c: 
+	Splitted more files
+	 Show current rates, not the ones from the last second
+
+2005-09-27 20:16  titer
+
+	* NEWS: [no log message]
+
+2005-09-27 19:48  titer
+
+	* libtransmission/: Jamfile, peer.c, peermessages.h, peerutils.c,
+	peerutils.h:  Split
+
+2005-09-27 19:27  titer
+
+	* TODO, libtransmission/peer.c, libtransmission/peerutils.h:  Don't
+	ask a peer for the same block twice
+
+2005-09-27 18:49  titer
+
+	* libtransmission/tracker.c:  Fixed tracker timeout when we are
+	able to send but can't recv anything
+
+2005-09-27 12:08  titer
+
+	* NEWS: [no log message]
+
+2005-09-27 12:05  titer
+
+	* TODO, libtransmission/peer.c:  Ask for the rarest pieces first
+
+2005-09-26 23:20  titer
+
+	* TODO, libtransmission/inout.c, libtransmission/peer.c:  Fixed
+	http://<b style="color:black;background-color:#ffff66">transmission</b>.m0k.org/forum/viewtopic.php?t=33
+	 Fixed a typo that prevented from properly avoiding waiting for
+	 socket timeouts
+
+2005-09-26 22:11  titer
+
+	* libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c:  Memleak
+
+2005-09-26 21:48  titer
+
+	* libtransmission/: Jamfile, fdlimit.c, fdlimit.h, inout.c,
+	internal.h, <b style="color:black;background-color:#ffff66">transmission</b>.c, upload.c:  Don't open more than
+	TR_MAX_OPEN_FILES files at a time
+
+2005-09-25 21:56  titer
+
+	* TODO:  More
+
+2005-09-25 21:32  titer
+
+	* TODO:  More
+
+2005-09-25 15:42  titer
+
+	* TODO:  More
+
+2005-09-23 11:52  titer
+
+	* packageOSX.sh:  Fixed links
+
+2005-09-22 21:51  titer
+
+	* NEWS, packageOSX.sh:	Get ready for 0.2
+
+2005-09-22 21:36  titer
+
+	* TODO, configure, macosx/Controller.h, macosx/Controller.m,
+	macosx/Info.plist, macosx/English.lproj/InfoPlist.strings,
+	macosx/English.lproj/MainMenu.nib/classes.nib,
+	macosx/English.lproj/MainMenu.nib/info.nib,
+	macosx/English.lproj/MainMenu.nib/keyedobjects.nib:  Updated
+	version to 0.2
+	 Show download folder in the info panel
+
+2005-09-22 21:24  titer
+
+	* libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c:  Race condition
+
+2005-09-22 21:19  titer
+
+	* libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c, macosx/Controller.m:	Fixed bug
+	when opening several torrents when download folder pref is "ask"
+	 Make sure a torrent is not open twice
+
+2005-09-22 20:51  titer
+
+	* macosx/: Controller.h, Controller.m:	OS X users can now choose
+	where to download into
+
+2005-09-22 20:24  titer
+
+	* transmissioncli.c, libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c,
+	libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.h, macosx/Controller.m:  Switched to
+	new OS X preferences file
+
+2005-09-22 15:59  titer
+
+	* macosx/English.lproj/MainMenu.nib/: info.nib, keyedobjects.nib: 
+	English
+
+2005-09-21 22:01  titer
+
+	* macosx/: Controller.m, PrefsController.h, PrefsController.m: 
+	Completed Download Folder preferences
+
+2005-09-21 19:57  titer
+
+	* libtransmission/: peer.c, peerutils.c, peerutils.h:  Send
+	keep-alive every 2 mins
+
+2005-09-20 20:08  titer
+
+	* macosx/NameCell.m:  Typo
+
+2005-09-20 18:24  titer
+
+	* libtransmission/net.c, macosx/PrefsController.h,
+	macosx/PrefsController.m,
+	macosx/English.lproj/MainMenu.nib/classes.nib,
+	macosx/English.lproj/MainMenu.nib/info.nib,
+	macosx/English.lproj/MainMenu.nib/keyedobjects.nib:  Increased port
+	range, more work on OS X prefs
+
+2005-09-20 11:25  titer
+
+	* TODO:  Link to the forum thread
+
+2005-09-19 22:33  titer
+
+	* macosx/: Controller.m, English.lproj/MainMenu.nib/info.nib,
+	English.lproj/MainMenu.nib/keyedobjects.nib:  Tuned preferences
+	window
+
+2005-09-19 21:20  titer
+
+	* macosx/: PrefsController.h, PrefsController.m,
+	English.lproj/MainMenu.nib/classes.nib,
+	English.lproj/MainMenu.nib/info.nib,
+	English.lproj/MainMenu.nib/keyedobjects.nib:  Better placement of
+	the prefs windows
+
+2005-09-19 20:36  titer
+
+	* macosx/: Controller.h, Controller.m,
+	English.lproj/MainMenu.nib/classes.nib,
+	English.lproj/MainMenu.nib/info.nib,
+	English.lproj/MainMenu.nib/keyedobjects.nib:  Added menu items
+	opening <b style="color:black;background-color:#ffff66">Transmission</b> homepage or forum
+
+2005-09-19 15:25  titer
+
+	* macosx/English.lproj/MainMenu.nib/: info.nib, keyedobjects.nib: 
+	Add widgets to specify the folder to download into
+
+2005-09-19 12:16  titer
+
+	* TODO, transmissioncli.c, macosx/NameCell.m:  Typo
+
+2005-09-16 22:45  titer
+
+	* NEWS:  Typo
+
+2005-09-16 22:43  titer
+
+	* TODO: [no log message]
+
+2005-09-16 00:45  titer
+
+	* TODO:  OS X requests
+
+2005-09-15 23:06  titer
+
+	* TODO:  More
+
+2005-09-15 18:34  titer
+
+	* NEWS:  0.1
+
+2005-09-15 18:09  titer
+
+	* TODO:  multi tracker
+
+2005-09-15 18:04  titer
+
+	* NEWS, configure, transmissioncli.c, macosx/Info.plist,
+	macosx/English.lproj/InfoPlist.strings:  Version
+
+2005-09-15 17:27  titer
+
+	* macosx/: Controller.m, PrefsController.m:  Allow the user to
+	change ports
+
+2005-09-15 17:07  titer
+
+	* libtransmission/tracker.c:  Fixed tr_trackerClose taking all the
+	CPU
+
+2005-09-15 17:05  titer
+
+	* transmissioncli.c, libtransmission/internal.h,
+	libtransmission/net.c, libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c,
+	libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.h:  Added -p/--port
+
+2005-09-15 16:12  titer
+
+	* transmissioncli.c, libtransmission/utils.c:  Print errors at
+	debug level 0
+
+2005-09-15 16:12  titer
+
+	* TODO:  More
+
+2005-09-15 15:55  titer
+
+	* libtransmission/: net.c, tracker.c, <b style="color:black;background-color:#ffff66">transmission</b>.c:  Don't bind
+	with net_server + cosmetic
+
+2005-09-15 14:59  titer
+
+	* AUTHORS, libtransmission/peer.c:  Optimized + made sure that the
+	spare bits in bitfields are unset
+
+2005-09-15 10:27  titer
+
+	* TODO:  More
+
+2005-09-15 09:51  titer
+
+	* TODO:  More
+
+2005-09-15 09:51  titer
+
+	* TODO:  More bugs
+
+2005-09-14 23:23  titer
+
+	* TODO:  More and less to do
+
+2005-09-14 22:51  titer
+
+	* configure:  NetBSD support
+
+2005-09-14 22:45  titer
+
+	* libtransmission/peer.c:  Check for duplicate peers as soon as we
+	get the handshake
+
+2005-09-14 22:38  titer
+
+	* libtransmission/peer.c:  Cosmetic
+
+2005-09-14 22:34  titer
+
+	* transmissioncli.c:  Fixed a warning
+
+2005-09-14 21:39  titer
+
+	* transmissioncli.c:  cosmetic
+
+2005-09-14 20:18  titer
+
+	* libtransmission/upload.c:  Keep more samples
+
+2005-09-14 19:55  titer
+
+	* libtransmission/upload.c:  Fix for no-upload
+
+2005-09-14 19:49  titer
+
+	* libtransmission/peer.c:  Shuffle peers so the older ones don't
+	get all the upload
+
+2005-09-14 19:16  titer
+
+	* libtransmission/: peer.c, peerutils.h:  stupid stupid stupid
+
+2005-09-14 19:09  titer
+
+	* libtransmission/: peer.c, peerutils.c:  clean up
+
+2005-09-14 18:45  titer
+
+	* libtransmission/: peer.c, peerutils.c:  Quick fix for upload
+	stats
+
+2005-09-14 18:35  titer
+
+	* libtransmission/net.c:  Factorized some code
+
+2005-09-14 18:25  titer
+
+	* libtransmission/: net.c, peer.c, peerutils.c, peerutils.h,
+	tracker.c:  Started fixing upload
+
+2005-09-14 17:38  titer
+
+	* libtransmission/peer.c:  Fixed a memleak
+
+2005-09-14 17:21  titer
+
+	* configure, libtransmission/internal.h, libtransmission/net.c: 
+	Cleaned up BeOS defines
+
+2005-09-14 17:15  titer
+
+	* configure, libtransmission/net.c, libtransmission/net.h,
+	libtransmission/peer.c, libtransmission/peerutils.c,
+	libtransmission/peerutils.h, libtransmission/tracker.c,
+	libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c, libtransmission/upload.c,
+	libtransmission/upload.h:  Many changes so <b style="color:black;background-color:#ffff66">Transmission</b> now works
+	on BeOS/net_server. Upload
+	 is yet broken.
+
+2005-09-13 17:30  titer
+
+	* configure:  Mention that BeOS/net_server is yet unsupported
+
+2005-09-13 17:24  titer
+
+	* transmissioncli.c:  Cosmetic
+
+2005-09-13 17:13  titer
+
+	* configure:  Zeta fix
+
+2005-09-13 17:06  titer
+
+	* .cvsignore, Jamrules, configure, libtransmission/inout.c,
+	libtransmission/internal.h, libtransmission/net.c:  Added configure
+	script
+
+2005-09-13 16:29  titer
+
+	* Jamrules, libtransmission/internal.h, libtransmission/net.c: 
+	BeOS/BONE fixes
+
+2005-09-13 14:41  titer
+
+	* Jamrules, libtransmission/internal.h, libtransmission/net.c: 
+	Zeta fixes
+
+2005-09-12 23:37  titer
+
+	* libtransmission/net.c:  BeOS way of setting sockets non-blocking
+	and closing them
+
+2005-09-12 23:36  titer
+
+	* libtransmission/utils.h:  No usleep on BeOS, but snooze
+
+2005-09-09 20:33  titer
+
+	* libtransmission/peer.c:  Check sooner if we are connected to
+	ourselves
+
+2005-09-09 20:16  titer
+
+	* TODO: [no log message]
+
+2005-09-09 20:09  titer
+
+	* macosx/: NameCell.m, English.lproj/MainMenu.nib/info.nib,
+	English.lproj/MainMenu.nib/keyedobjects.nib:  OS X: while seeding,
+	show how many people we are connected/uploading to
+	 OS X: make tracker address/announce URL selectable
+
+2005-09-07 21:50  titer
+
+	* libtransmission/inout.c:  Store resume files in ~/.<b style="color:black;background-color:#ffff66">transmission</b>/
+	 Fixed fatal bug with > 2 GB torrents
+
+2005-09-06 19:28  titer
+
+	* libtransmission/inout.c:  Linux compile fix
+
+2005-09-06 19:23  titer
+
+	* libtransmission/inout.c:  Resuming fixes
+
+2005-09-06 18:41  titer
+
+	* libtransmission/inout.c:  Mem leaks
+
+2005-09-06 18:21  titer
+
+	* libtransmission/inout.c:  Implemented fast resuming
+
+2005-09-05 16:26  titer
+
+	* libtransmission/peer.c:  Fixed a segfault
+
+2005-09-05 15:11  titer
+
+	* macosx/: PrefsController.h, PrefsController.m,
+	English.lproj/MainMenu.nib/classes.nib,
+	English.lproj/MainMenu.nib/info.nib,
+	English.lproj/MainMenu.nib/keyedobjects.nib:  Place the Prefs
+	window on top of the main window
+
+2005-09-05 14:54  titer
+
+	* libtransmission/: peer.c, upload.c: [no log message]
+
+2005-09-04 18:30  titer
+
+	* Jamfile, macosx/Controller.h, macosx/Controller.m,
+	macosx/PrefsController.h, macosx/PrefsController.m,
+	macosx/English.lproj/MainMenu.nib/classes.nib,
+	macosx/English.lproj/MainMenu.nib/info.nib,
+	macosx/English.lproj/MainMenu.nib/keyedobjects.nib,
+	macosx/<b style="color:black;background-color:#ffff66">Transmission</b>.xcodeproj/project.pbxproj:	Implemented upload
+	limit selection in OS X UI
+
+2005-09-04 16:45  titer
+
+	* libtransmission/: inout.c, peer.c, utils.h:  Optimized
+
+2005-09-04 16:08  titer
+
+	* libtransmission/internal.h, libtransmission/net.c,
+	libtransmission/utils.c, libtransmission/utils.h,
+	macosx/Controller.m:  More inlining
+
+2005-09-04 15:27  titer
+
+	* AUTHORS, libtransmission/peer.c, libtransmission/peerutils.c,
+	libtransmission/peerutils.h:  Implemented queueing on our side
+
+2005-09-04 12:29  titer
+
+	* transmissioncli.c, libtransmission/peer.c,
+	libtransmission/peerutils.c, libtransmission/tracker.c,
+	libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c, libtransmission/upload.c,
+	libtransmission/upload.h, libtransmission/utils.h,
+	macosx/English.lproj/MainMenu.nib/info.nib,
+	macosx/English.lproj/MainMenu.nib/keyedobjects.nib:  Upload
+	enhancements
+
+2005-09-01 18:58  titer
+
+	* libtransmission/peer.c:  More debug
+
+2005-09-01 18:39  titer
+
+	* libtransmission/: peer.c, peerutils.c, peerutils.h,
+	<b style="color:black;background-color:#ffff66">transmission</b>.c, upload.c:  Choke people we are't sending anything
+	to
+	 Fixed total upload rate
+
+2005-09-01 17:50  titer
+
+	* libtransmission/: peer.c, upload.c, upload.h:  Quick kludge to
+	upload more than 10KB/s
+
+2005-09-01 16:13  titer
+
+	* libtransmission/: Jamfile, internal.h, peer.c, peerutils.c,
+	peerutils.h, <b style="color:black;background-color:#ffff66">transmission</b>.c, upload.c, upload.h:  Splitted rate
+	control
+	 Fixed handling of multiple requests
+
+2005-09-01 14:42  titer
+
+	* libtransmission/peer.c, macosx/Controller.m,
+	macosx/ProgressCell.m:	Stupid bug
+
+2005-09-01 14:27  titer
+
+	* transmissioncli.c, libtransmission/internal.h,
+	libtransmission/peer.c, libtransmission/peerutils.c,
+	libtransmission/peerutils.h, libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c: 
+	Implemented upload rate control
+
+2005-08-31 19:06  titer
+
+	* transmissioncli.c, libtransmission/peer.c,
+	libtransmission/peer.h, libtransmission/peerutils.c,
+	libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c, libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.h: 
+	Some work on upload
+
+2005-08-31 18:21  titer
+
+	* libtransmission/peer.c:  Cosmetic
+
+2005-08-31 18:15  titer
+
+	* libtransmission/peer.c:  "End game" mode was sometimes used when
+	it shouldn't
+
+2005-08-31 17:07  titer
+
+	* libtransmission/Jamfile, libtransmission/peer.c,
+	libtransmission/peerutils.c, libtransmission/peerutils.h,
+	macosx/Controller.m, macosx/English.lproj/MainMenu.nib/info.nib,
+	macosx/English.lproj/MainMenu.nib/keyedobjects.nib:  Splitted
+	peer.c, enhanced OS X preferences
+
+2005-08-31 16:23  titer
+
+	* libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c, libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.h,
+	macosx/Controller.h, macosx/Controller.m,
+	macosx/English.lproj/MainMenu.nib/classes.nib,
+	macosx/English.lproj/MainMenu.nib/info.nib,
+	macosx/English.lproj/MainMenu.nib/keyedobjects.nib:  Show total
+	downloaded/uploaded
+
+2005-08-31 16:10  titer
+
+	* libtransmission/: internal.h, peer.c, tracker.c:  Fixed
+	uploaded/downloaded fields as well
+
+2005-08-31 15:59  titer
+
+	* libtransmission/tracker.c:  Fixed "left" field in tracker query
+
+2005-08-31 14:53  titer
+
+	* transmissioncli.c, libtransmission/utils.c:  Fixed bad usage of
+	putenv/getenv
+
+2005-08-31 14:33  titer
+
+	* libtransmission/inout.c:  Use 64bits fseek
+
+2005-08-30 17:50  titer
+
+	* transmissioncli.c, libtransmission/inout.c,
+	libtransmission/peer.c:  Clean up
+
+2005-08-30 17:41  titer
+
+	* libtransmission/internal.h:  Commited that by mistake
+
+2005-08-29 23:11  titer
+
+	* libtransmission/inout.c:  Removed duplicate code
+
+2005-08-29 22:54  titer
+
+	* transmissioncli.c, libtransmission/inout.c,
+	libtransmission/inout.h, libtransmission/internal.h,
+	libtransmission/peer.c, libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c,
+	libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.h, libtransmission/utils.c,
+	libtransmission/utils.h: [no log message]
+
+2005-08-29 13:59  titer
+
+	* libtransmission/: tracker.c, <b style="color:black;background-color:#ffff66">transmission</b>.c:	Start showing rates
+	more quickly
+
+2005-08-26 12:30  titer
+
+	* libtransmission/: <b style="color:black;background-color:#ffff66">transmission</b>.c, <b style="color:black;background-color:#ffff66">transmission</b>.h:  Typos
+
+2005-08-26 12:21  titer
+
+	* libtransmission/utils.c:  BeOS won't like vasprintf
+
+2005-08-26 06:56  titer
+
+	* AUTHORS, libtransmission/internal.h: [no log message]
+
+2005-08-26 05:31  titer
+
+	* transmissioncli.c:  Added -v/--verbose
+
+2005-08-26 05:03  titer
+
+	* libtransmission/metainfo.c:  Check if file names are valid UTF-8
+	strings, and convert them if they
+	 are not.
+
+2005-08-25 20:17  titer
+
+	* libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c, libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.h,
+	macosx/Controller.h, macosx/Controller.m,
+	macosx/English.lproj/MainMenu.nib/classes.nib,
+	macosx/English.lproj/MainMenu.nib/info.nib,
+	macosx/English.lproj/MainMenu.nib/keyedobjects.nib:  Show total
+	DL/UL rates
+
+2005-08-25 17:33  titer
+
+	* libtransmission/inout.c, libtransmission/utils.c,
+	macosx/Controller.h, macosx/Controller.m,
+	macosx/English.lproj/MainMenu.nib/classes.nib,
+	macosx/English.lproj/MainMenu.nib/info.nib,
+	macosx/English.lproj/MainMenu.nib/keyedobjects.nib:  Fixed crash
+	when files cannot be created
+	 Enabled preferences window (doesn't work yet)
+
+2005-08-24 20:04  titer
+
+	* macosx/NameCell.m:  Crop error messages
+
+2005-08-24 16:34  titer
+
+	* transmissioncli.c, libtransmission/internal.h,
+	libtransmission/tracker.c, libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c,
+	libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.h, macosx/NameCell.m,
+	macosx/English.lproj/MainMenu.nib/info.nib,
+	macosx/English.lproj/MainMenu.nib/keyedobjects.nib:  Show tracker
+	errors
+
+2005-08-23 20:36  titer
+
+	* libtransmission/peer.c:  When the maximum number of peers is
+	reached, don't kick out incoming
+	 connections right away
+
+2005-08-23 18:47  titer
+
+	* transmissioncli.c, libtransmission/net.c, libtransmission/net.h,
+	libtransmission/peer.c, libtransmission/tracker.c,
+	libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c:  cleanup
+
+2005-08-23 18:29  titer
+
+	* Jamrules:  Cross compiling convenience
+
+2005-08-23 17:23  titer
+
+	* transmissioncli.c, libtransmission/inout.c:  transmissioncli.c:
+	keep showing progress on the same line
+
+2005-08-23 17:13  titer
+
+	* libtransmission/utils.c, macosx/Controller.m, macosx/main.m: 
+	Allow to set debug level with TR_DEBUG and -v
+
+2005-08-23 14:57  titer
+
+	* libtransmission/metainfo.c, libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.h,
+	macosx/Controller.m:  Remember open torrents and reopen them on
+	next launch
+
+2005-08-22 17:54  titer
+
+	* libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c, libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.h,
+	macosx/Controller.m, macosx/NameCell.m:  Added ETA
+	 Hopefullly fixed column sizes with Panther
+
+2005-08-22 17:06  titer
+
+	* macosx/NameCell.m:  Use a real ellipsis
+
+2005-08-22 16:54  titer
+
+	* macosx/: Controller.m, NameCell.m:  Crop file name when it
+	doesn't fit
+
+2005-08-22 15:49  titer
+
+	* libtransmission/: net.c, peer.c, peer.h, tracker.c:  Fixed crash
+	with non-compact trackers
+
+2005-08-22 14:20  titer
+
+	* Jamrules, libtransmission/internal.h:  internal.h: BeOS compile
+	fix
+	 Jamrules: allow cross compilation
+
+2005-08-22 13:52  titer
+
+	* libtransmission/tracker.c:  Don't ask for more peers than we need
+
+2005-08-22 13:29  titer
+
+	* libtransmission/tracker.c:  Removed an old debug
+
+2005-08-22 13:27  titer
+
+	* libtransmission/peer.c:  When we reach the maximum number of
+	peers, start dropping the ones we
+	 have no interest in
+
+2005-08-22 13:04  titer
+
+	* macosx/ProgressCell.m:  Optimized the bars drawing more
+
+2005-08-22 12:14  titer
+
+	* libtransmission/peer.c:  Fixed 100% CPU usage when max number of
+	peers is reached
+
+2005-08-22 11:59  titer
+
+	* libtransmission/: inout.c, internal.h, <b style="color:black;background-color:#ffff66">transmission</b>.c:  Optimized
+	a bit more by avoiding looping on blockHave (instead, always
+	 remember how many blocks we have)
+
+2005-08-22 11:41  titer
+
+	* libtransmission/utils.c, libtransmission/utils.h,
+	macosx/ProgressCell.m:	Inlined bitfield utils and optimized
+	drawing of the simple bar
+
+2005-08-22 11:31  titer
+
+	* libtransmission/peer.c:  Optimized a bit: tasks that don't need
+	to be done ASAP are done only
+	 every second
+
+2005-08-22 11:04  titer
+
+	* libtransmission/peer.c:  Useless message to people connecting by
+	telnet
+
+2005-08-22 11:03  titer
+
+	* libtransmission/: internal.h, peer.c:  Drop peers who actually
+	don't upload anything
+	 Increased a bit the max number of peers
+
+2005-08-22 07:51  titer
+
+	* libtransmission/peer.c:  Fixed breakage in previous commit
+
+2005-08-22 07:24  titer
+
+	* libtransmission/peer.c:  Kick suspect connections more quickly
+
+2005-08-22 07:02  titer
+
+	* libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c:  Reset statistics when the user
+	pauses/resumes
+
+2005-08-22 06:39  titer
+
+	* libtransmission/peer.c:  Update correctly the number of uploading
+	peers
+
+2005-08-22 06:21  titer
+
+	* libtransmission/: inout.c, net.c, peer.c:  Nicer rate
+	calculation, cosmetic
+
+2005-08-22 04:33  titer
+
+	* libtransmission/peer.c:  Drop peers who haven't sent anything in
+	3 minutes
+
+2005-08-22 03:31  titer
+
+	* libtransmission/: peer.c, peer.h:  Removed unused code, cosmetic
+
+2005-08-22 02:51  titer
+
+	* libtransmission/: peer.c, tracker.c:	Fixed incoming connections
+
+2005-08-22 02:37  titer
+
+	* libtransmission/: internal.h, net.c, net.h, peer.c, peer.h,
+	tracker.c, tracker.h, <b style="color:black;background-color:#ffff66">transmission</b>.c:  + Don't connect twice to the
+	same peer
+	 + Try to bind from TR_BIND_PORT_MIN to TR_BIND_PORT_MAX before
+	giving up
+	 + Cosmetic
+
+2005-08-20 16:03  titer
+
+	* libtransmission/: inout.c, internal.h, metainfo.c, metainfo.h,
+	<b style="color:black;background-color:#ffff66">transmission</b>.c, <b style="color:black;background-color:#ffff66">transmission</b>.h:  Only pass the tr_info_t pointer to
+	tr_metainfoParse, since it doesn't
+	 need more
+
+2005-08-20 15:40  titer
+
+	* macosx/: Controller.h, Controller.m, ProgressCell.h,
+	ProgressCell.m, English.lproj/MainMenu.nib/classes.nib,
+	English.lproj/MainMenu.nib/info.nib,
+	English.lproj/MainMenu.nib/keyedobjects.nib: [no log message]
+
+2005-08-19 19:32  titer
+
+	* macosx/ProgressCell.m: [no log message]
+
+2005-08-19 19:19  titer
+
+	* macosx/: ProgressCell.h, ProgressCell.m: [no log message]
+
+2005-08-18 18:08  titer
+
+	* libtransmission/internal.h, libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c,
+	libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.h, libtransmission/utils.c,
+	macosx/Controller.h, macosx/Controller.m, macosx/NameCell.m,
+	macosx/ProgressCell.m, macosx/English.lproj/MainMenu.nib/info.nib,
+	macosx/English.lproj/MainMenu.nib/keyedobjects.nib: [no log
+	message]
+
+2005-08-16 23:40  titer
+
+	* libtransmission/internal.h, libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c,
+	libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.h, macosx/NameCell.m: [no log message]
+
+2005-08-16 19:04  titer
+
+	* Jamfile, libtransmission/internal.h, macosx/Controller.m,
+	macosx/Info.plist, macosx/<b style="color:black;background-color:#ffff66">Transmission</b>.icns,
+	macosx/<b style="color:black;background-color:#ffff66">Transmission</b>.xcodeproj/project.pbxproj: [no log message]
+
+2005-08-16 00:11  titer
+
+	* libtransmission/: inout.c, utils.c: [no log message]
+
+2005-08-15 23:54  titer
+
+	* libtransmission/: net.c, tracker.c: [no log message]
+
+2005-08-15 23:26  titer
+
+	* .cvsignore, AUTHORS, Jamfile, Jamrules, LICENSE, mtorrentcli.c,
+	transmissioncli.c, libtransmission/Jamfile,
+	libtransmission/bencode.c, libtransmission/bencode.h,
+	libtransmission/inout.c, libtransmission/inout.h,
+	libtransmission/internal.h, libtransmission/metainfo.c,
+	libtransmission/metainfo.h, libtransmission/net.c,
+	libtransmission/net.h, libtransmission/peer.c,
+	libtransmission/peer.h, libtransmission/sha1.c,
+	libtransmission/sha1.h, libtransmission/tracker.c,
+	libtransmission/tracker.h, libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.c,
+	libtransmission/<b style="color:black;background-color:#ffff66">transmission</b>.h, libtransmission/utils.c,
+	libtransmission/utils.h, macosx/Controller.h, macosx/Controller.m,
+	macosx/MTController.h, macosx/MTController.m,
+	macosx/MTorrent_Prefix.pch, macosx/NameCell.h, macosx/NameCell.m,
+	macosx/ProgressCell.h, macosx/ProgressCell.m,
+	macosx/Transmission_Prefix.pch,
+	macosx/English.lproj/MainMenu.nib/classes.nib,
+	macosx/English.lproj/MainMenu.nib/info.nib,
+	macosx/English.lproj/MainMenu.nib/keyedobjects.nib,
+	macosx/<b style="color:black;background-color:#ffff66">Transmission</b>.xcodeproj/project.pbxproj: [no log message]
+
+2005-08-14 16:00  titer
+
+	* macosx/ProgressCell.m: [no log message]
+
+2005-08-14 04:37  titer
+
+	* macosx/ProgressCell.m: [no log message]
+
+2005-08-13 21:20  titer
+
+	* macosx/MTController.m: [no log message]
+
+2005-08-13 20:55  titer
+
+	* macosx/MTController.m: [no log message]
+
+2005-08-13 16:59  titer
+
+	* macosx/English.lproj/MainMenu.nib/: info.nib, keyedobjects.nib:
+	[no log message]
+
+2005-08-13 13:58  titer
+
+	* macosx/: MTController.h, MTController.m,
+	<b style="color:black;background-color:#ffff66">Transmission</b>.xcodeproj/project.pbxproj: [no log message]
+
+2005-08-12 19:14  titer
+
+	* Jamrules, mtorrentcli.c: [no log message]
+
+2005-08-12 19:03  titer
+
+	* .cvsignore, Jamfile, Jamrules, macosx/Info.plist,
+	macosx/English.lproj/InfoPlist.strings,
+	macosx/English.lproj/MainMenu.nib/info.nib,
+	macosx/English.lproj/MainMenu.nib/keyedobjects.nib,
+	macosx/<b style="color:black;background-color:#ffff66">Transmission</b>.xcodeproj/.cvsignore,
+	macosx/<b style="color:black;background-color:#ffff66">Transmission</b>.xcodeproj/project.pbxproj: [no log message]
+
+2005-08-12 17:55  titer
+
+	* macosx/NameCell.m: [no log message]
+
+2005-08-12 17:34  titer
+
+	* macosx/ProgressCell.m: [no log message]
+
+2005-08-12 15:00  titer
+
+	* macosx/: MTController.m, NameCell.m, ProgressCell.m,
+	English.lproj/MainMenu.nib/info.nib,
+	English.lproj/MainMenu.nib/keyedobjects.nib: [no log message]
+
+2005-08-11 04:20  titer
+
+	* macosx/: MTController.h, MTController.m, NameCell.m,
+	English.lproj/MainMenu.nib/classes.nib,
+	English.lproj/MainMenu.nib/info.nib,
+	English.lproj/MainMenu.nib/keyedobjects.nib, Images/Progress.tiff:
+	[no log message]
+
+2005-08-11 01:10  titer
+
+	* macosx/: MTController.m, ProgressCell.m: [no log message]
+
+2005-08-10 15:42  titer
+
+	* macosx/Images/Stop.tiff: [no log message]
+
+2005-08-10 03:47  titer
+
+	* macosx/MTController.m: [no log message]
+
+2005-08-10 03:17  titer
+
+	* macosx/MTController.m: [no log message]
+
+2005-08-06 17:17  titer
+
+	* mtorrentcli.c: [no log message]
+
+2005-08-06 17:03  titer
+
+	* mtorrentcli.c, macosx/MTController.h, macosx/MTController.m: [no
+	log message]
+
+2005-08-04 19:55  titer
+
+	* macosx/: MTController.h, MTController.m: [no log message]
+
+2005-08-04 18:19  titer
+
+	* macosx/: MTController.m, English.lproj/MainMenu.nib/classes.nib,
+	English.lproj/MainMenu.nib/keyedobjects.nib: [no log message]
+
+2005-08-03 19:23  titer
+
+	* macosx/: NameCell.m, ProgressCell.m: [no log message]
+
+2005-08-03 17:26  titer
+
+	* AUTHORS, LICENSE, macosx/MTController.h, macosx/MTController.m,
+	macosx/English.lproj/MainMenu.nib/classes.nib,
+	macosx/English.lproj/MainMenu.nib/info.nib,
+	macosx/English.lproj/MainMenu.nib/keyedobjects.nib,
+	macosx/Images/.cvsignore, macosx/Images/Info.tiff,
+	macosx/Images/Open.tiff, macosx/Images/Remove.tiff,
+	macosx/Images/Resume.tiff, macosx/Images/Stop.tiff: [no log
+	message]
+
+2005-08-03 13:57  titer
+
+	* macosx/NameCell.m: [no log message]
+
+2005-08-03 13:17  titer
+
+	* .cvsignore, Jamfile, Jamrules, macosx/.cvsignore,
+	macosx/Info.plist, macosx/MTController.h, macosx/MTController.m,
+	macosx/MTorrent_Prefix.pch, macosx/NameCell.h, macosx/NameCell.m,
+	macosx/ProgressCell.h, macosx/ProgressCell.m, macosx/main.m,
+	macosx/English.lproj/.cvsignore,
+	macosx/English.lproj/InfoPlist.strings,
+	macosx/English.lproj/MainMenu.nib/classes.nib,
+	macosx/English.lproj/MainMenu.nib/info.nib,
+	macosx/English.lproj/MainMenu.nib/keyedobjects.nib: [no log
+	message]
+
+2005-08-03 13:11  titer
+
+	* mtorrentcli.c: [no log message]
+
+2005-08-01 19:54  titer
+
+	* Jamrules, mtorrentcli.c: [no log message]
+
+2005-07-30 19:08  titer
+
+	* Jamrules: [no log message]
+
+2005-07-27 15:58  titer
+
+	* mtorrentcli.c, LICENCE, LICENSE: [no log message]
+
+2005-07-26 21:34  titer
+
+	* LICENCE, mtorrentcli.c: [no log message]
+
+2005-07-26 20:17  titer
+
+	* mtorrentcli.c: [no log message]
+
+2005-07-23 14:57  titer
+
+	* mtorrentcli.c: [no log message]
+
+2005-07-12 20:07  titer
+
+	* mtorrentcli.c: [no log message]
+
+2005-07-08 15:49  titer
+
+	* mtorrentcli.c: [no log message]
+
+2005-07-05 12:36  titer
+
+	* Jamrules, mtorrentcli.c: [no log message]
+
+2005-06-22 23:33  titer
+
+	* mtorrentcli.c: [no log message]
+
+2005-06-22 20:26  titer
+
+	* mtorrentcli.c: [no log message]
+
+2005-06-22 01:36  titer
+
+	* mtorrentcli.c: [no log message]
+
+2005-06-22 00:02  titer
+
+	* Jamrules: [no log message]
+
+2005-06-21 18:02  titer
+
+	* mtorrentcli.c: [no log message]
+
+2005-06-19 00:44  titer
+
+	* mtorrentcli.c:  clean up
+
+2005-06-18 22:45  titer
+
+	* mtorrentcli.c:  ...
+
+2005-06-18 21:15  titer
+
+	* Jamrules, mtorrentcli.c:  tracker queries
+
+2005-06-18 16:25  titer
+
+	* mtorrentcli.c:  added help
+
+2005-06-17 23:48  titer
+
+	* mtorrentcli.c:  split
+
+2005-06-17 22:35  titer
+
+	* mtorrentcli.c:  smarter scrape
+
+2005-06-17 21:15  titer
+
+	* .cvsignore, Jamfile, Jamrules, bencode.c, bencode.h, io.c,
+	m0ktorrent.c, m0ktorrent.h, metainfo.c, mtorrentcli.c, net.c,
+	peer.c, sha1.c, sha1.h, tracker.c:  seperated interface / library
+
+2004-12-12 19:34  titer
+
+	* m0ktorrent.c:  More verbose
+
+2004-12-12 17:32  titer
+
+	* Jamfile, m0ktorrent.c, m0ktorrent.h, net.c, tracker.c:  Quick
+	cygwin compile fixes
+
+2004-12-08 02:15  titer
+
+	* Jamfile, m0ktorrent.c, net.c, tracker.c:  BeOS fixes
+
+2004-12-08 01:59  titer
+
+	* m0ktorrent.h:  beos fix
+
+2004-12-08 01:54  titer
+
+	* Jamfile, m0ktorrent.c, m0ktorrent.h, metainfo.c, sha1.c, sha1.h: 
+	Include SHA algorithm for poor OS who don't have openssl
+
+2004-12-08 01:19  titer
+
+	* m0ktorrent.c:  Avoid useless checks when looking for downloaded
+	pieces
+
+2004-12-07 14:29  titer
+
+	* m0ktorrent.c:  Fixed a bunch of memleaks
+
+2004-12-07 14:15  titer
+
+	* Jamfile, io.c, m0ktorrent.c, tracker.c:  Removed unused code,
+	minor fixes
+
+2004-12-06 22:43  titer
+
+	* .cvsignore:  cvsignore
+
+2004-12-06 22:39  titer
+
+	* io.c, Jamfile, bencode.c, bencode.h, metainfo.c, net.c, peer.c,
+	m0ktorrent.c, m0ktorrent.h, tracker.c: Initial revision
+
+2004-12-06 22:39  titer
+
+	* io.c, Jamfile, bencode.c, bencode.h, metainfo.c, net.c, peer.c,
+	m0ktorrent.c, m0ktorrent.h, tracker.c:	Start
+

@@ -1,0 +1,86 @@
+
+<br /><br />
+<span style="color: #626262;">
+I've got a lovely bunch of coconuts<br />
+There they are standing in a row<br />
+Big ones, Little ones, Some as big as your head!<br />
+</span>
+<br /><br />
+<span style="color: #540000;">
+I've got a lovely bunch of coconuts<br />
+There they are standing in a row<br />
+Big ones, Little ones, Some as big as your head!<br />
+</span>
+<br /><br />
+<span style="color: #838383;">
+I've got a lovely bunch of coconuts<br />
+There they are standing in a row<br />
+Big ones, Little ones, Some as big as your head!<br />
+</span>
+
+<br /><br />
+<span style="color: #B00000;">
+I've got a lovely bunch of coconuts<br />
+There they are standing in a row<br />
+Big ones, Little ones, Some as big as your head!<br />
+</span>
+
+
+<br /><br />
+<span style="color: rgb(156,0,0);">
+I've got a lovely bunch of coconuts<br />
+There they are standing in a row<br />
+Big ones, Little ones, Some as big as your head!<br />
+</span>
+
+<br /><br />
+<span style="color: #606060;">
+I've got a lovely bunch of coconuts<br />
+There they are standing in a row<br />
+Big ones, Little ones, Some as big as your head!<br />
+</span>
+<br /><br />
+<span style="color: #606060;">
+I've got a lovely bunch of coconuts<br />
+There they are standing in a row<br />
+Big ones, Little ones, Some as big as your head!<br />
+</span>
+<br /><br />
+<span style="color: #505050;">
+I've got a lovely bunch of coconuts<br />
+There they are standing in a row<br />
+Big ones, Little ones, Some as big as your head!<br />
+</span>
+
+
+
+
+<img src="images/DownloadAppleColor.png" alt="" style="float: right; margin-right: 200px;" />s
+<br />
+<br />
+I've got a lovely bunch of coconuts<br />
+There they are standing in a row<br />
+Big ones, Little ones, Some as big as your head!<br />
+<br /><br />
+
+
+
+<span style="color: #303030;">
+I've got a lovely bunch of coconuts<br />
+There they are standing in a row<br />
+Big ones, Little ones, Some as big as your head!<br />
+</span>
+
+<br /><br />
+
+<span style="color: #202020;">
+I've got a lovely bunch of coconuts<br />
+There they are standing in a row<br />
+Big ones, Little ones, Some as big as your head!<br />
+</span>
+<img src="images/DownloadSource.png" alt="" style="float: right; margin-right: 200px; width:128px;height:128px;" />
+<br /><br />
+<span style="color: #101010;">
+Attempting to find a font colour that works is quite annoying.<br />
+I find it not unlike messing with things that never quite work out.<br />
+</span>

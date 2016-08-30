@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>Transmission</title>
+	<style type="text/css">
+      body, html{
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+      body{
+        background: url(images/background.png);
+        font-family: Helvetica, sans-serif;
+        color: #262626;
+        text-shadow: #eee 0 1px 0;
+      }
+      #header{
+        margin: 0;
+        padding: 0;
+        height: 141px;
+        position: fixed;
+        background: white url(images/header.png) center bottom repeat-x;
+        float: left;
+        width: 100%;
+
+        margin-bottom: 3em;
+      }
+      #header .meat{
+        width: 800px;
+        background: url(images/h-mask.png) center top repeat-y;
+        margin: 0 auto;
+        height: 137px;
+        position: relative;
+      }
+      h1{
+        height: 42px;
+        width: 412px;
+        margin: 0;
+        background: url(images/transmission.png) center top no-repeat;
+        position: absolute;
+        top: 50px;
+        left: 105px;
+      }
+      h1 span{display: none;}
+      #tagline{
+        height: 16px;
+        width: 219px;
+        background: url(images/tagline.png) center top no-repeat;
+        position: absolute;
+        top: 105px;
+        left: 300px;
+      }
+      #tagline span{display: none;}
+      #gearshift{
+        height: 167px;
+        width: 178px;
+        background: url(images/gearshift.png) center top no-repeat;
+        position: absolute;
+        right: 105px;
+        z-index: 10;
+      }
+      #nav{
+        position: absolute;
+        top: 141px;
+        background-color: white;
+        text-shadow: #fff 0 2px 0;
+        width: 100%;
+        overflow: hidden;
+     	-moz-box-shadow: 0 15px 15px #FFF;
+        -webkit-box-shadow: 0 15px 15px #FFF;
+      }
+      #nav ul{
+      	margin: 0;
+        list-style: none;
+        padding: 0;
+        overflow: hidden; /*  */
+      }
+      #nav li{
+        float: left;
+        padding: 0 10px;
+
+      }
+      #nav a{
+      	display: block;
+        color: black;
+        font-weight: bold;
+        text-shadow: 1px white;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 12px;
+        padding-top: 5px;
+        line-height: 18px;
+      }
+      #nav a.current{
+        background: url(images/current.png) top center no-repeat;
+      }
+      #main{
+        width: 800px;
+        min-height: 100%;
+        margin: 0 auto;
+        background-color: white;
+        box-shadow: 0 -10px 10px #888;
+        -moz-box-shadow: 0 -10px 10px #888;
+        -webkit-box-shadow: 0 -10px 10px #CCC;
+        font-size: 0.82em;
+        padding: 0 1em 0 1em;
+      }
+      #main .meat{
+      	 padding: 170px 1em 55px 1em;
+      }
+      #footer{
+        height: 50px;
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+        background: url(images/footer.png) top center repeat-x;
+        -webkit-box-shadow: 0px -5px 5px #EEE;
+      }
+
+/* CONTENT */
+	#screenshots {
+		text-align: center;
+		width: 630px;
+		padding-top: 40px;
+		margin: 0 auto;
+		overflow: hidden;
+	}
+
+	#screenshots a{
+		float: left;
+		display: block;
+	}
+
+	#screenshots img {
+		border: #f00 1px solid;
+		width: 100px;
+		height: 100px;
+		margin: 10px;
+	}
+
+/* break */
+a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #8a0e0e;
+	border: none;
+}
+
+a:active {
+	outline: 0;
+}
+
+a:hover {
+	text-decoration: none;
+	font-weight: bold;
+	color: #400606;
+}
+
+#Footer {
+	margin-top: 20px;
+	width: inherit;
+	text-align: center;
+	font-size: 0.7em;
+	z-index: 200;
+	color: #917575;
+	text-shadow: none;
+}
+
+#Footer a {
+	color: #918181;
+}
+
+#Footer a:hover {
+	color: #c2c2c2;
+}
+
+#Donate {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 220px;
+	height: 45px;
+	background: url("images/PayPal.png") center no-repeat;
+	overflow: hidden;
+}
+
+#Bandwidth {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 208px;
+	height: 45px;
+	background: url("images/Bandwidth.png") center no-repeat;
+	overflow: hidden;
+}
+
+#Donate a, #Bandwidth a {
+	padding: 200px;
+}
+		</style>
+	</head>
+	<body>
+		<div id="header">
+			<div class="meat">
+				<h1><span>Transmission</span></h1>
+				<div id="tagline"><span>A Fast, Easy, and Free BitTorrent Client</span></div>
+				<div id="gearshift"></div>
+				<div id="nav">
+					<ul>
+						<li><a href="index.php" class="current">Main</a></li>
+						<li><a href="index.php">About</a></li>
+						<li><a href="about.php">Download</a></li>
+						<li><a href="links.php">Forums</a></li>
+						<li><a href="http://trac.transmissionbt.com">Trac</a></li>
+						<li><a href="resources.php">Resources</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="main">
+			<div class="meat">
+				
+				<div style="float: left; width: 300px; margin-top: 20px; text-align: center;">
+					Latest Version:<br />
+					Transmission 1.73<br />
+						<br />
+					<a href="download.php">Download Now</a><br />
+					<a href="http://trac.transmissionbt.com/wiki/Changes">What's New</a><br />
+						<br />
+					<a href="#">Previous Releases</a>
+				</div>
+				
+				<div style="float: left; margin-top: 20px;">
+					<b>Some features:</b>
+					<ul>
+						<li>Uses <a href="about.php">fewer resources</a> than most other clients</li>
+						<li>Native <a href="images/screenshots/Mac-Large.jpg">Mac</a>, <a href="images/screenshots/GTK-Large.jpg">GTK+</a>, and <a href="images/screenshots/QT-Large.jpg">Qt</a> clients
+						<li>Transmission can run as a GUI application or a <a href="http://en.wikipedia.org/wiki/Daemon_(computer_software)">daemon</a></li>
+						<li><a href="images/screenshots/Clutch-Large.jpg">Web UI</a> to connect to a Transmission session</li>
+						<li><a href="images/screenshots/Curses-Large.jpg">Terminal client</a> to connect to a Transmission session</li>
+						<li><a href="http://www.bluetack.co.uk/forums/index.php">Bluetack</a> blocklists and automated updates</li>
+						<li>Full <a href="http://en.wikipedia.org/wiki/BitTorrent_protocol_encryption">encryption</a>, <a href="http://en.wikipedia.org/wiki/Distributed_hash_table">DHT</a>, and <a href="http://en.wikipedia.org/wiki/Peer_exchange">PEX</a> support</li>
+					</ul>
+					<a href="about.php">Learn More</a>
+				</div>
+
+				<div id="screenshots">
+					<a href="images/screenshots/Mac-Large.jpg">
+						<img src="images/screenshots/Mac-Thumbnail.jpg" alt="Mac Screenshot Thumbnail" />
+						<br/>
+						Mac
+					</a>
+					<a href="images/screenshots/GTK-Large.jpg">
+						<img src="images/screenshots/GTK-Thumbnail.jpg" alt="GTK Screenshot Thumbnail" />
+						<br/>
+						GTK
+					</a>
+					<a href="images/screenshots/Qt-Large.jpg">
+						<img src="images/screenshots/Qt-Thumbnail.jpg" alt="Qt Screenshot Thumbnail" />
+						<br/>
+						QT
+					</a>
+					<a href="images/screenshots/Clutch-Large.jpg">
+						<img src="images/screenshots/Clutch-Thumbnail.jpg" alt="Web Client Screenshot Thumbnail" />
+						<br/>
+						Web Client
+					</a>
+					<a href="images/screenshots/Curses-Large.jpg">
+						<img src="images/screenshots/Curses-Thumbnail.jpg" alt="Curses Screenshot Thumbnail" />
+						<br/>
+						Command Line
+					</a>
+				</div>
+				
+			</div>
+		</div>
+		<div id="footer">
+			<div id="Footer">
+				&copy; Copyright <a href="mailto:webmaster@transmissionbt.com">Transmission Project</a> 2009, All Rights Reserved<br />
+				Design by <a href="http://www.strandeddesign.com">Stranded Design</a>, implemented by <a href="http://www.nilok.ca">Nilok Productions</a><br />
+				<span style="display: none;">Many thanks to kjg :P.</span>
+			</div>
+			<div id="Donate">
+					<a href="#">&nbsp;</a>		
+			</div>
+			<div id="Bandwidth">
+				<a href="http://www.cachefly.com/">&nbsp;</a>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+
+Header:
+	Concept: "Transmission" Cut into a layer that looks "above" the rest of the page. Text cuts through to background. Texture dark carbon fiber-ish material, see texture reference in link. The background texture should be something along the lines of the red leather in the Transmission icon's handle.
+	Refer to the texture used in the background of the following image.
+		http://personals.nilok.ca/Gimp/transmission-1920.jpg
+	Dark texture compliments the transmission icon, which will be superimposed over the header in the upper right corner of the site.
+		http://personals.nilok.ca/Gimp/Transmission.icns
+	I will also need a horizontally-tilable image for the header, to allow for windows of different width.
+	Charles would also like to see the current slogan integrated somehow, though that is a lesser issue -- "A Fast, Easy, and Free BitTorrent client"
+	I have made a very crude example of the above, lacking shadows and general good-looking-ness.
+		http://personals.nilok.ca/Gimp/Textures%20and%20Header.jpg
+
+	Dimensions:
+		The header must be able to hold the 128x128 representation of the transmission icon with a bit of padding above and below. I believe 150px tall plus the shadow below should be adequate, though it is up to you to adjust that accordingly.
+		I imagined the "Transmission" text being quite large, though I'm not sure how the slogan would then fit in.
+		The minimum width for the site about 900 pixels, so the text and icon must fit in at that size. Any smaller I'll make it hide the icon. 
+
+Download Icons:
+	Concept: 3d, curved arrow pointing downwards, with an image stamped into it to provide users with information as to what it downloads (apple logo, linux penguin, other? [what to use for source code download?])
+		http://gallery.me.com/malcolmjarvis#100003/photo1229379993261&bgcolor=black
+	See Transmission icon for inspiration (arrow in base)
+
+This work is all still conceptual so I'd like to see progress along every step so we can stop and change things if it doesn't turn out as good as my mind thinks it'll be (happens all the time, stupid brain.) I've also linked below my random sketches of the site overall layout. Please excuse the cruddy quality I just shot them with my iPhone. If you have questions or insight, PLEASE let me know, either through email, or my AIM (I'll be online almost 14 hours a day). There is no rush on any of this, though we'd like to have at least rough work to conceptualize the site to get the other developer's input as soon as possible. (This means while you can work at your own pace, we'd appreciate if that could not be "a few months")
+http://gallery.me.com/malcolmjarvis#100003/photo1229384255140&bgcolor=black
+
+And last but not least, if you have other things you need to do, or don't feel up to the task, or just think I'm a loser, let me know so I can find an alternate to help us out. I appreciate you taking your time to even hear me out.
+
+As for credit if you do do this, if you want it you can have a link at the bottom of every page, just like the site has now. Something along the lines of "Site Graphics by <yournameorcompanyhere>"

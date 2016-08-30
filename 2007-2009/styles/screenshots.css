@@ -1,0 +1,23 @@
+#ImageContainer {
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	z-index: 2;
+}
+
+#Image {
+	margin: 0 auto;
+	z-index: 9999;
+	text-align: center;
+	background-color: #111;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	display: none;
+}
+
+#Image a {
+	font-size: 14pt;
+	text-decoration: none;
+	color: #fff;
+}

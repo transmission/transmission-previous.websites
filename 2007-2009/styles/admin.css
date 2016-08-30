@@ -1,0 +1,22 @@
+.SubmitButtons {
+	float: right;
+	width: 80px;
+}
+
+.TextAreas {
+	float: left;
+}
+
+.PostContainer {
+	width: 80%;
+}
+
+#Pages {
+	width: 100%;
+	text-align: center;
+	padding-top: 10px;
+}
+
+#InnerContainer {
+	margin-top: -10px;
+}

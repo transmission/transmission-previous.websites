@@ -1,0 +1,111 @@
+* {
+	padding: 0;
+	margin: 0;
+	border: none;
+	font-family: "lucida grande", "Trebuchet MS", helvetica, sans-serif;
+	color: rgb(189,189,189);
+}
+
+html, body {
+	height: 100%;
+	min-height: 100%;
+	background-color: #111;
+}
+
+/* BEGIN Header */
+
+#Header {
+	width: 100%;
+	background-repeat: repeat-x;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 10px;
+}
+
+#Header #Icon {
+	width: 170px;
+	height: 170px;
+}
+
+#Header #Title {
+	padding-bottom: 25px;
+	/*vertical-align: 50%;*/
+}
+
+/* END Header */
+/* BEGIN Navigation */
+
+#Navigation {
+	/* margin: 0 auto; /* We don't need this since width is 100%, but if we change that uncomment this */
+	width: 100%;
+	border-top: 3px double #404040;
+	border-bottom: 3px double #404040;
+	padding: 1em 0 1em 0; /* Give it some vertical spacing */
+}
+
+#Navigation ul {
+	list-style: none;
+	height: 1.2em; /* Drop the bottom border down */
+	width: 100%;
+}
+
+#Navigation ul li {
+	float: left;
+	width: 25%; /* 100 / number of links in navigation */
+	text-align: center;
+}
+
+#Navigation ul li a {
+	text-decoration: none;
+	width: 100%;
+	text-align: center;
+	/*text-transform: uppercase;*/
+	padding: 1em; /* Give a bit more space then just the text for clicking */
+}
+
+#Navigation ul li a:hover {
+	color: #B00000;
+}
+
+/* END Navigation */
+/* BEGIN Content */
+
+#Content {
+	padding-left: 0.5em;
+	padding-top: 0.5em;
+}
+
+/* BEGIN Download Page */
+
+/* Download options div */
+#Download {
+
+}
+
+#Download img {
+	float: left;
+	cursor: pointer;
+	width: 4.7em;
+	height: 4.7em;
+}
+
+#Download .DownloadInfo {
+	width: 25.1em;
+	font-size: 0.5em;
+	text-align: center;
+	display: none;
+}
+
+#Download .DownloadInfo ul {
+	text-align: left;
+	list-style: none;
+}
+
+#Download .DownloadInfo ul li {
+	float: left;
+	width: 33%;
+	text-align: center;
+}
+
+/* END Download Page */
+/* END Content */

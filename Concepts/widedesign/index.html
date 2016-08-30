@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+	<head>
+		<title>Transmission</title>
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<script src="jquery.js" type="text/JavaScript"></script>
+		<script type="text/JavaScript">
+$(document).ready(function(){
+
+	$("#Download img").mouseover(function(){
+		$(".DownloadInfo").hide();
+		$("." + $(this).attr("alt")).show();
+	});
+
+});
+		</script>
+	</head>
+	<body>
+		<div id="Header">
+			<img id="Icon" src="images/Transmission512.png" alt="Icon" />
+			<img id="Title" src="images/HeaderTitle.png" alt="Transmission - A Fast, Easy, and Free BitTorrent client" />
+		</div>
+		<div id="Navigation">
+			<ul>
+				<li>
+					<a href="#">
+						Download
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						About
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Resources
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						Links
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div id="Content">
+			<div id="Download">
+				<div style="height: 5.9em;">
+					What download do you want?<br />
+					<img src="images/DownloadApple.png" alt="MacOSX" />
+					<img src="images/DownloadLinux.png" alt="UnixVariant" />
+					<img src="images/DownloadSource.png" alt="Source" />
+				</div>
+				<div>
+					<div class="DownloadInfo Info" style="display: block;">
+						Hover over the icon you want to view download options.
+					</div>
+					<div class="DownloadInfo MacOSX">
+						<a href="http://mirrors.m0k.org/transmission/files/Transmission-1.40.dmg">Transmission-1.40.dmg</a><br />
+						OS 10.5 or later is <em>strongly</em> recommended.<br />
+						OS 10.4 requires 10.4.11 with <a href="http://support.apple.com/kb/HT1249">Security Update 2008-002</a><br />
+						
+					</div>
+
+					<div class="DownloadInfo UnixVariant">
+						If your OS has its own package management system, check there first Ñ
+most of them already carry Transmission.<br />
+						<ul>
+							<li>
+								<a href="http://forum.transmissionbt.com/viewtopic.php?f=13&amp;t=5599">FreeBSD</a>
+							</li>
+							<li>
+								<a href="http://trisk.acm.jhu.edu/SFE/">Solaris</a> 
+								<em>
+									(<a href="http://pkgbuild.sourceforge.net/spec-files-extra">readme</a>)
+								</em>
+							</li>
+							<li>
+								<a href="http://forum.transmissionbt.com/viewtopic.php?f=13&amp;t=5604">Ubuntu</a>
+							</li>
+						</ul>
+						Don't see your OS? <a href="http://forum.transmissionbt.com/viewtopic.php?f=13&amp;t=5596">Read this</a>.
+					</div>
+
+					<div class="DownloadInfo Source">
+						<a href="http://mirrors.m0k.org/transmission/files/transmission-1.40.tar.bz2">transmission-1.40.tar.bz2</a><br />
+						The wiki has <a href="http://trac.transmissionbt.com/wiki/Building">instructions on building</a> Transmission.
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

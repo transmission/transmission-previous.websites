@@ -1,0 +1,18 @@
+ul, li {
+	list-style: none;
+}
+
+ul li ul, ul li ul li {
+	font-size: 14px;
+	font-family: 'lucida grande', 'myriad pro', sans-serif, verdana, 'helvetica neue', helvetica, arial;
+	color: #616161;
+	list-style-type: disc;
+
+}
+
+.hidden {}
+
+.hidden2 {
+	list-style-type: none;
+	padding-left: 10px;
+}
